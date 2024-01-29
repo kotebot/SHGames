@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecf3e8b4d3645bf9b5228af445b1a18, type: 3}
+  m_Name: PlanetsConfiguration
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  AmountPlanets: 4
+  MinimumDistanceBetweenPlanet: 7
+  MaximumDistanceBetweenPlanet: 10
+  PlanetPreferences:
+  - IsPlayer: 0
+    GravityRadius: 10
+    Mass: 2
+    Diameter: 3
+    Speed: 30
+    AmountRockets:
+    - RocketType: 0
+      Amount: 15
+    - RocketType: 1
+      Amount: 2
+    - RocketType: 0
+      Amount: 2
+    HealthPoint: 100
+  - IsPlayer: 0
+    GravityRadius: 10
+    Mass: 2.4
+    Diameter: 3.8
+    Speed: 25
+    AmountRockets:
+    - RocketType: 0
+      Amount: 1
+    - RocketType: 1
+      Amount: 1
+    - RocketType: 2
+      Amount: 15
+    HealthPoint: 100
+  - IsPlayer: 1
+    GravityRadius: 10
+    Mass: 2.2
+    Diameter: 3.1
+    Speed: 20
+    AmountRockets:
+    - RocketType: 1
+      Amount: 8
+    - RocketType: 2
+      Amount: 8
+    - RocketType: 0
+      Amount: 8
+    HealthPoint: 100
+  - IsPlayer: 0
+    GravityRadius: 10
+    Mass: 2.6
+    Diameter: 4.2
+    Speed: 15
+    AmountRockets:
+    - RocketType: 1
+      Amount: 15
+    - RocketType: 0
+      Amount: 1
+    - RocketType: 2
+      Amount: 1
+    HealthPoint: 100
+  PlanetPrefab: {fileID: 6246867344239223189, guid: 3d4ae75f73915064ea184f9c230bc2cc, type: 3}
