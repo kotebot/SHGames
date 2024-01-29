@@ -20,13 +20,15 @@ namespace PlanetSystem.Impl.Planets
         [SerializeField, AssetsOnly] private Rocket _rocket;
         [SerializeField, ChildGameObjectsOnly] private Transform _rocketSpawnPoint;
         
+        private IPlanetController _controller;
         private IInputAttacker _inputAttacker;
         
-        public void Setup(IInputAttacker inputAttacker)
+        public void Setup(IInputAttacker inputAttacker, IPlanetController planetController)
         {
             _inputAttacker = inputAttacker;
             
             _inputAttacker.OnPushRocket += OnPushRocket;
+            _controller = planetController;
         }
 
         private void OnDestroy()
@@ -43,6 +45,7 @@ namespace PlanetSystem.Impl.Planets
             spawnedRocket.Setup(rocketPreferences);
             
             var nearPlanet = _planetsList.Planets
+                .Where(pc => pc != _controller)
                 .OrderBy(planet => Vector3.Distance(planet.Planet.Position, transform.position))
                 .First()
                 .Planet;

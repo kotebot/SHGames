@@ -85,7 +85,7 @@ namespace PlanetSystem.Impl.Planets
                 ? _playerAttacker
                 : new AIAttacker(preferences.AmountRockets, _rocketPreferences);
 
-            spawnedPlanet.PlanetAttacker.Setup(attacker);
+            spawnedPlanet.PlanetAttacker.Setup(attacker, spawnedPlanet);
         }
         
         /// <returns>Return false if not valid config, GD must be check this.</returns>
